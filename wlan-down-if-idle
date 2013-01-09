@@ -1,0 +1,8 @@
+#!/bin/sh
+#/sbin/wlan-down-if-idle
+#switch off WLANs only if there are no clients connected
+sta_wlan0=`iw dev wlan0 station dump`
+sta_wlan1=`iw dev wlan1 station dump`
+if [ -z "$sta_wlan0" ] && [ -z "$sta_wlan1" ]; then 
+	/sbin/wifi down
+fi
