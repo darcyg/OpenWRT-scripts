@@ -1,8 +1,8 @@
 30 12 * * 1-5 /sbin/wlan-down-if-idle
-10 15 * * 1-5 wifi up
+00 15 * * 1-5 wifi up
 10 16 * * 1-5 /sbin/wlan-down-if-idle
-00 19 * * 3-4 wifi up
-00 17 * * 1,2,5 wifi up
+30 18 * * 3-4 wifi up
+45 16 * * 1,2,5 wifi up
 0,1,11,21,31,41,51 * * * * /usr/bin/set_kernel_timezone >/dev/null 2>&1
 0 0,4,8,12,16,20 * * * date -u  +"%Y.%m.%d-%H:%M:%S" >/usr/data/time_backup
 0 0,4,8,12,16,20 * * * /tmp/bw_backup/do_bw_backup.sh
